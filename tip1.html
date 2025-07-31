@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>More on &lt;big&gt; Tag</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      color: #005a9c;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    pre {
+      background-color: #e8e8e8;
+      padding: 10px;
+      border-left: 4px solid #005a9c;
+      overflow-x: auto;
+    }
+
+    .highlight {
+      background-color: #fff3cd;
+      border-left: 5px solid #ffc107;
+      padding: 10px;
+      margin: 15px 0;
+    }
+
+    .bigger-css {
+      font-size: 1.5em;
+      color: #c0392b;
+    }
+
+    .back-link {
+      margin-top: 30px;
+      display: inline-block;
+      text-decoration: none;
+      background-color: #005a9c;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+
+    .back-link:hover {
+      background-color: #979fa4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Deeper Look at the <code>&lt;big&gt;</code> Tag</h1>
+
+  <p>The <code>&lt;big&gt;</code> tag was once a simple way to make text appear <strong>larger than the default</strong>. It increases the font size by one level, but it is now considered outdated and replaced by CSS for better control.</p>
+
+  <h2>Why It Was Used:</h2>
+  <ul>
+    <li>Easy and quick way to enlarge a word or sentence without writing extra styles</li>
+    <li>Supported in early HTML versions like HTML 3.2 and 4.01</li>
+    <li>Often used in headings, labels, or to highlight key content</li>
+  </ul>
+
+  <div class="highlight">
+    ⚠️ <strong>Important:</strong> The <code>&lt;big&gt;</code> tag is <u>no longer supported</u> in HTML5. Modern browsers may still display it, but it is discouraged in current web standards.
+  </div>
+
+  <h2>🔍 Sample Code:</h2>
+  <pre>
+  &lt;p&gt;Normal: This is text&lt;/p&gt;
+  &lt;p&gt;Big: &lt;big&gt;This is bigger text&lt;/big&gt;&lt;/p&gt;
+  </pre>
+
+  <p>
+    Normal: This is text<br>
+    Big: <big>This is bigger text</big>
+  </p>
+
+  <h2>✅ Do It With CSS Instead</h2>
+  <pre>
+  &lt;span style="font-size: 1.4em;"&gt;Big text with CSS&lt;/span&gt;
+  </pre>
+  <p><span class="bigger-css">Big text with CSS</span></p>
+
+  <a class="back-link" href="intro.html">← Back to Main Page</a>
+
+</body>
+</html>

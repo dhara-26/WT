@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Tag Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 20px;
+    }
+    .form-container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: auto;
+    }
+    .form-container h2 {
+      text-align: center;
+    }
+    .form-description {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>User Registration Form</h2>
+
+  <div class="form-description">
+    <strong>What is a Form?</strong><br>
+    A form in HTML is used to collect user input and send it to a web server for processing. It acts as an interface between the user and the application, allowing people to enter data like names, email addresses, passwords, and more.<br><br>
+
+    <strong>Uses of Forms:</strong>
+    <ul>
+      <li>To register users on websites</li>
+      <li>To log in or sign up for services</li>
+      <li>To collect feedback or contact information</li>
+      <li>To place orders or fill surveys</li>
+      <li>To search within a website or database</li>
+    </ul>
+  </div>
+
+  <form action="submit_form.php" method="post">
+    
+    <!-- Text Input -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name">
+
+    <!-- Email -->
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="example@mail.com">
+
+    <!-- Password -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+
+    <!-- Radio Button -->
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="Male"> Male
+    <input type="radio" id="female" name="gender" value="Female"> Female
+
+    <!-- Checkbox -->
+    <label>Interests:</label>
+    <input type="checkbox" name="interest" value="Coding"> Coding
+    <input type="checkbox" name="interest" value="Music"> Music
+
+    <!-- Dropdown -->
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+      <option value="">Select</option>
+      <option value="India">India</option>
+      <option value="USA">USA</option>
+      <option value="UK">UK</option>
+    </select>
+
+    <!-- Textarea -->
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" placeholder="Write your message..."></textarea>
+
+    <!-- Submit Button -->
+
+    <button type="submit">Register</button>
+ <ahref= "intro.html" target="_blank"></a></td>
+</form>
+</div>
+
+</body>
+</html>

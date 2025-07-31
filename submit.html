@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Submission Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f7ff;
+      padding: 20px;
+    }
+    .result-box {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .result-box h2 {
+      text-align: center;
+      color: #333;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="result-box">
+  <h2>Form Submission Result</h2>
+  <p><strong>Name:</strong> <?php echo htmlspecialchars($_POST["name"]); ?></p>
+  <p><strong>Email:</strong> <?php echo htmlspecialchars($_POST["email"]); ?></p>
+  <p><strong>Password:</strong> <?php echo htmlspecialchars($_POST["password"]); ?></p>
+  <p><strong>Gender:</strong> <?php echo isset($_POST["gender"]) ? htmlspecialchars($_POST["gender"]) : 'Not selected'; ?></p>
+  <p><strong>Interest(s):</strong> 
+    <?php
+      if (isset($_POST["interest"])) {
+        if (is_array($_POST["interest"])) {
+          echo implode(", ", $_POST["interest"]);
+        } else {
+          echo htmlspecialchars($_POST["interest"]);
+        }
+      } else {
+        echo "None";
+      }
+    ?>
+  </p>
+  <p><strong>Country:</strong> <?php echo htmlspecialchars($_POST["country"]); ?></p>
+  <p><strong>Message:</strong> <?php echo nl2br(htmlspecialchars($_POST["message"])); ?></p>
+</div>
+
+</body>
+</html>
